@@ -1078,9 +1078,7 @@ ClusterIcon.prototype.onAdd = function() {
   var isDragging = false;
   google.maps.event.addDomListener(this.div_, 'click', function(event) {
     // Only perform click when not preceded by a drag
-    if (!isDragging) {
-      that.triggerClusterClick(event);
-    }
+    that.triggerClusterClick(event);
   });
   google.maps.event.addDomListener(this.div_, 'mousedown', function() {
     isDragging = false;
